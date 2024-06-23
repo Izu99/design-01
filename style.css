@@ -1,0 +1,176 @@
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	width: 100vw;
+	height: 100vh;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 500;
+}
+
+.background-img {
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	z-index: -1;
+    /* opacity: 0.4; */
+    image-orientation: 90deg;
+}
+
+.homepage {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center; /* Center content horizontally */
+	align-items: center; /* Center content vertically */
+}
+
+.content {
+	padding: 2rem 4rem; /* Use padding instead of margin */
+	width: 60%;
+    height: 60%;
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.35);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(3.8px);
+	-webkit-backdrop-filter: blur(3.8px);
+	border: 1px solid rgba(255, 255, 255, 0.28);
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative; 
+    padding-bottom: 4px; 
+    cursor: pointer; 
+}
+
+ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: currentColor; 
+    bottom: 0;
+    transition: width 0.3s ease; 
+}
+
+ul li:hover::after {
+    width: 100%; 
+}
+
+.a {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+input {
+	width: 15vw;
+	height: 4vh;
+	border: none;
+	border-radius: 5px;
+    padding-left: 1rem;
+    color: #83878a;
+}
+
+button {
+	background-color: rgb(35, 196, 35);
+	border: none;
+	border-radius: 5px;
+	color: #ffffff;
+	height: 4.2vh;
+	width: auto;
+    padding: 0.1rem 0.2rem;
+    cursor: pointer;
+}
+
+.hero {
+	display: flex;
+	width: 100%;
+}
+
+.content .col-8 {
+	width: 60.67%;
+}
+
+.content .col-4 {
+    width: auto;
+    display: flex;
+}
+
+.hero .col-4 img {
+	width: 100%;
+	object-fit: cover;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 6.5vh;
+    font-size: 2.6rem;
+    width: 80%;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 450;
+    width: 60%;
+}
+
+.socilas {
+    width: 35%;
+    display: flex;
+    /* background-color: #ffffff; */
+    justify-content: space-between;
+}
+
+i {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:750px) {
+    .content {
+        height: auto;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .col-8 {
+        width: 100%!important;
+    }
+
+    h2 {
+        width: 100%;
+    }
+
+    p {
+        width: 80%;
+    }
+
+    .col-4 {
+        width: 100%!important;
+    }
+
+}
+
